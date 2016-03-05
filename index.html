@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>法布雷大叔的文件服务器</title>
+
+    <script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">法布雷大叔的文件服务器</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">主页</a></li>
+                    <li><a href="faith.html">信仰</a></li>
+                    <li><a href="anime.html">动画</a></li>
+                    <li><a href="./wordpress">Blog</a></li>
+                    <li><a href="me.html">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>法布雷大叔的文件服务器</h1>
+            <p style="font-family:Calibri">Uncle Fabre's file server</p>
+            <p style="font-family:Meiryo">ファブレおじさんのファイルサーバ</p>
+        </div>
+        <div class="alert alert-success alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4>你好，旅行者</h4>
+            <p>大地母亲忽悠着你，如果你只是路过，你可以选择</p>
+            <p>
+                <a href="./wordpress" class="btn btn-primary">老猴子的忧郁</a>
+                <a href="faith.html" class="btn btn-default">En taro Tassadar!</a>
+            </p>
+        </div>
+        <div class="alert alert-info" role="alert">您可能需要这些文件</div>
+        <table class="table table-hover">
+            <tr>
+                <th>文件</th>
+                <th>项目</th>
+                <th>说明</th>
+                <th>更新信息</th>
+            </tr>
+            <tr id="items-tr">
+                <td>
+                    <img src="images/File.svg" height="14" width="14" />
+                    <a href="Items.xml">Items.xml</a>
+                </td>
+                <td><a href="https://whattodevelop.codeplex.com/" target="_blank">WhatToDelvelop</a></td>
+                <td>WTD 的装备内容文件</td>
+                <td><div id="items-content"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/File.svg" height="14" width="14" />
+                    <a href="Enemy.xml">Enemy.xml</a>
+                </td>
+                <td><a href="https://github.com/smdhz/CodeA" target="_blank">CodeA</a></td>
+                <td>艦これ BOSS列表</td>
+                <td>更新到6-3</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/File.svg" height="14" width="14" />
+                    <a href="CodeA.dll">CodeA.dll</a>
+                </td>
+                <td><a href="https://github.com/smdhz/CodeA" target="_blank">CodeA</a></td>
+                <td>あ号作战计数器</td>
+                <td>v1.3.3</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/File.svg" height="14" width="14" />
+                    <a href="Logger.dll">Logger.dll</a>
+                </td>
+                <td><a href="https://github.com/smdhz/Logger" target="_blank">Logger</a></td>
+                <td>出击记录器</td>
+                <td>v1.1.2</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 & (xmlHttp.status == 200 | xmlHttp.status == 304) & xmlHttp.getResponseHeader("Content-Type") == "application/xml") {
+                    var time = new Date(xmlHttp.getResponseHeader("Last-Modified"));
+                    var days = Math.floor((new Date() - time) / (24 * 3600 * 1000));
+                    $("#items-content").text("更新于 " + days + " 天前");
+                    if (days <= 7)
+                        $("#items-tr").addClass("warning");
+                }
+            };
+            xmlHttp.open("HEAD", "./Items.xml", true);
+            xmlHttp.send(null);
+        });
+    </script>
+</body>
+</html>
