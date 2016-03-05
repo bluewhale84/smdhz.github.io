@@ -29,7 +29,6 @@
                     <li class="active"><a href="index.html">主页</a></li>
                     <li><a href="faith.html">信仰</a></li>
                     <li><a href="anime.html">动画</a></li>
-                    <li><a href="./wordpress">Blog</a></li>
                     <li><a href="me.html">关于</a></li>
                 </ul>
             </div>
@@ -59,10 +58,7 @@
                 <th>更新信息</th>
             </tr>
             <tr id="items-tr">
-                <td>
-                    <img src="images/File.svg" height="14" width="14" />
-                    <a href="Items.xml">Items.xml</a>
-                </td>
+                <td><a href="Files/Items.xml">Items.xml</a></td>
                 <td><a href="https://whattodevelop.codeplex.com/" target="_blank">WhatToDelvelop</a></td>
                 <td>WTD 的装备内容文件</td>
                 <td><div id="items-content"></div></td>
@@ -77,19 +73,13 @@
                 <td>更新到6-3</td>
             </tr>
             <tr>
-                <td>
-                    <img src="images/File.svg" height="14" width="14" />
-                    <a href="CodeA.dll">CodeA.dll</a>
-                </td>
+                <td><a href="Files/CodeA.dll">CodeA.dll</a></td>
                 <td><a href="https://github.com/smdhz/CodeA" target="_blank">CodeA</a></td>
                 <td>あ号作战计数器</td>
                 <td>v1.3.3</td>
             </tr>
             <tr>
-                <td>
-                    <img src="images/File.svg" height="14" width="14" />
-                    <a href="Logger.dll">Logger.dll</a>
-                </td>
+                <td><a href="Files/Logger.dll">Logger.dll</a></td>
                 <td><a href="https://github.com/smdhz/Logger" target="_blank">Logger</a></td>
                 <td>出击记录器</td>
                 <td>v1.1.2</td>
@@ -108,7 +98,7 @@
                         $("#items-tr").addClass("warning");
                 }
             };
-            xmlHttp.open("HEAD", "./Items.xml", true);
+            xmlHttp.open("HEAD", "Files/Items.xml", true);
             xmlHttp.send(null);
         });
     </script>
