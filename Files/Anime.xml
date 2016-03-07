@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<<<<<<< HEAD
 <ArrayOfAnimeSync xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <AnimeSync>
     <First>2016-01-10T00:00:00</First>
@@ -66,19 +65,5 @@
     <Title>おしえて!ギャル子ちゃん</Title>
     <Weekday>6</Weekday>
     <Keyword>辣妹</Keyword>
-=======
-<ArrayOfAnimeSync xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <AnimeSync>
-    <First>2015-10-04T00:00:00</First>
-    <Title>俺がお嬢様学校に「庶民サンプル」としてゲッツされた件</Title>
-    <Weekday>0</Weekday>
-    <Keyword>庶民</Keyword>
-  </AnimeSync>
-  <AnimeSync>
-    <First>2015-10-06T00:00:00</First>
-    <Title>新妹魔王の契約者 BURST</Title>
-    <Weekday>2</Weekday>
-    <Keyword>新妹魔王</Keyword>
->>>>>>> 077c1b2e516a69ca45074235dc1aad07aa8c3d3f
   </AnimeSync>
 </ArrayOfAnimeSync>
