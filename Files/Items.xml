@@ -1412,6 +1412,17 @@
       <Name>Ro.43水偵</Name>
       <No2Info>
         <No2Ship>
+          <Name>Zara改</Name>
+          <Weekdays>
+            <int>1</int>
+            <int>2</int>
+            <int>3</int>
+            <int>4</int>
+            <int>5</int>
+          </Weekdays>
+          <Target>Ro.44水上戦闘機</Target>
+        </No2Ship>
+        <No2Ship>
           <Name>Italia</Name>
           <Weekdays>
             <int>0</int>
