@@ -1,91 +1,69 @@
 <?xml version="1.0"?>
-<ArrayOfAnimeInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <AnimeInfo>
+<ArrayOfAnimeSync xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AnimeSync>
     <First>2016-01-10T00:00:00</First>
-    <Index>7</Index>
     <Title>暦物語</Title>
     <Weekday>0</Weekday>
-    <Status>Normal</Status>
     <Keyword>物语</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2015-10-04T00:00:00</First>
-    <Index>20</Index>
     <Title>うたわれるもの 偽りの仮面</Title>
     <Weekday>0</Weekday>
-    <Status>Normal</Status>
     <Keyword>传颂</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2015-07-12T00:00:00</First>
-    <Index>32</Index>
     <Title>ドラゴンボール超</Title>
     <Weekday>0</Weekday>
-    <Status>Normal</Status>
     <Keyword>龙珠</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2016-01-12T00:00:00</First>
-    <Index>7</Index>
     <Title>最弱無敗の神装機竜</Title>
     <Weekday>2</Weekday>
-    <Status>Normal</Status>
     <Keyword>机龙</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2016-01-07T00:00:00</First>
-    <Index>8</Index>
     <Title>無彩限のファントム・ワールド</Title>
     <Weekday>4</Weekday>
-    <Status>Normal</Status>
     <Keyword>无彩限</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2016-01-14T00:00:00</First>
-    <Index>7</Index>
     <Title>この素晴らしい世界に祝福を!</Title>
     <Weekday>4</Weekday>
-    <Status>Normal</Status>
     <Keyword>献上</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2016-01-08T00:00:00</First>
-    <Index>8</Index>
     <Title>少女たちは荒野を目指す</Title>
     <Weekday>5</Weekday>
-    <Status>Normal</Status>
     <Keyword>荒野</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2016-01-08T00:00:00</First>
-    <Index>7</Index>
     <Title>だがしかし</Title>
     <Weekday>5</Weekday>
-    <Status>Normal</Status>
     <Keyword>粗点心</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2016-01-08T00:00:00</First>
-    <Index>8</Index>
     <Title>暗殺教室 第2期</Title>
     <Weekday>5</Weekday>
-    <Status>Normal</Status>
     <Keyword>暗杀</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2016-01-09T00:00:00</First>
-    <Index>8</Index>
     <Title>紅殻のパンドラ</Title>
     <Weekday>6</Weekday>
-    <Status>Normal</Status>
     <Keyword>红壳</Keyword>
-  </AnimeInfo>
-  <AnimeInfo>
+  </AnimeSync>
+  <AnimeSync>
     <First>2016-01-09T00:00:00</First>
-    <Index>8</Index>
     <Title>おしえて!ギャル子ちゃん</Title>
     <Weekday>6</Weekday>
-    <Status>Normal</Status>
     <Keyword>辣妹</Keyword>
-  </AnimeInfo>
-</ArrayOfAnimeInfo>
+  </AnimeSync>
+</ArrayOfAnimeSync>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0"?>
 <UpdateModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Version>2016-03-03T20:26:20.970281+08:00</Version>
+  <Version>2016-03-06T09:38:20.970281+08:00</Version>
   <Content>
     <Item>
       <Type>ソナー</Type>
@@ -169,6 +169,69 @@
     <Item>
       <Type>大口径主砲</Type>
       <Icon>MainCanonHeavy</Icon>
+      <Name>試製35.6cm三連装砲</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>金剛改二</Name>
+          <Weekdays>
+            <int>3</int>
+            <int>4</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+      </No2Info>
+      <No2Ship>
+        <Name>榛名改二</Name>
+        <Weekdays>
+          <int>4</int>
+          <int>5</int>
+        </Weekdays>
+        <Target>更新不可</Target>
+      </No2Ship>
+      <No2Ship>
+        <Name>扶桑改二</Name>
+        <Weekdays>
+          <int>3</int>
+          <int>4</int>
+          <int>5</int>
+          <int>6</int>
+        </Weekdays>
+        <Target>更新不可</Target>
+      </No2Ship>
+      <No2Ship>
+        <Name>山城改二</Name>
+        <Weekdays>
+          <int>0</int>
+          <int>4</int>
+          <int>5</int>
+          <int>6</int>
+        </Weekdays>
+        <Target>更新不可</Target>
+      </No2Ship>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>大口径主砲</Type>
+      <Icon>MainCanonHeavy</Icon>
+      <Name>35.6cm連装砲(ダズル迷彩)</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>榛名改二</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>2</int>
+            <int>3</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>試製35.6cm三連装砲</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>大口径主砲</Type>
+      <Icon>MainCanonHeavy</Icon>
       <Name>381mm／50 三連装砲</Name>
       <No2Info>
         <No2Ship>
@@ -270,6 +333,34 @@
             <int>0</int>
             <int>1</int>
             <int>4</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>大口径主砲</Type>
+      <Icon>MainCanonHeavy</Icon>
+      <Name>試製41cm三連装砲</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>長門改</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>3</int>
+            <int>4</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>陸奥改</Name>
+          <Weekdays>
+            <int>2</int>
+            <int>3</int>
+            <int>5</int>
+            <int>6</int>
           </Weekdays>
           <Target>更新不可</Target>
         </No2Ship>
@@ -523,7 +614,7 @@
           <Name>Littorio</Name>
           <Weekdays>
             <int>0</int>
-			<int>2</int>
+            <int>2</int>
             <int>3</int>
             <int>6</int>
           </Weekdays>
@@ -1283,6 +1374,58 @@
             <int>6</int>
           </Weekdays>
           <Target>更新不可</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>水上偵察機</Type>
+      <Icon>ReconSeaplane</Icon>
+      <Name>零式水上観測機</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>瑞穂</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>2</int>
+            <int>3</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>武蔵</Name>
+          <Weekdays>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>水上偵察機</Type>
+      <Icon>ReconSeaplane</Icon>
+      <Name>Ro.43水偵</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>Italia</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>Ro.44水上戦闘機</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>Roma改</Name>
+          <Weekdays>
+            <int>2</int>
+            <int>3</int>
+          </Weekdays>
+          <Target>Ro.44水上戦闘機</Target>
         </No2Ship>
       </No2Info>
       <IsFavorite>false</IsFavorite>
