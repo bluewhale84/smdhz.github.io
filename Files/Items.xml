@@ -496,6 +496,31 @@
     <Item>
       <Type>対空機銃</Type>
       <Icon>AAGun</Icon>
+      <Name>25mm単装機銃</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>皐月</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>25mm連装機銃★+5</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>文月</Name>
+          <Weekdays>
+            <int>3</int>
+            <int>4</int>
+          </Weekdays>
+          <Target>25mm連装機銃★+5</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>対空機銃</Type>
+      <Icon>AAGun</Icon>
       <Name>25mm連装機銃</Name>
       <No2Info>
         <No2Ship>
@@ -1375,6 +1400,40 @@
             <int>6</int>
           </Weekdays>
           <Target>更新不可</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>水上偵察機</Type>
+      <Icon>ReconSeaplane</Icon>
+      <Name>零式水上偵察機</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>千歳甲</Name>
+          <Weekdays>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>千代田甲</Name>
+          <Weekdays>
+            <int>3</int>
+            <int>4</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>秋津洲改</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>二式水戦改</Target>
         </No2Ship>
       </No2Info>
       <IsFavorite>false</IsFavorite>
