@@ -88,17 +88,19 @@
             <script>
                 $(document).ready(function () {
                     $("[role=items-tr]").each(function (){
+                        var tr = $(this);
                         var xmlHttp = new XMLHttpRequest();
                         xmlHttp.onreadystatechange = function () {
                             if (xmlHttp.readyState == 4 & (xmlHttp.status == 200 | xmlHttp.status == 304) & xmlHttp.getResponseHeader("Content-Type") == "application/xml") {
                                 var time = new Date(xmlHttp.getResponseHeader("Last-Modified"));
                                 var days = Math.floor((new Date() - time) / (24 * 3600 * 1000));
-                                $(this).find("#items-content").text("更新于 " + days + " 天前");
+                                tr.find("#items-content").text("更新于 " + days + " 天前");
                                 if (days <= 7)
-                                    $(this).addClass("success");
+                                    tr.addClass("success");
                             }
                         };
-                        xmlHttp.open("HEAD", "Files/" + this.attr("file"), true);
+                        var str="Files/" + $(this).attr("file");
+                        xmlHttp.open("HEAD", "Files/" + $(this).attr("file"), true);
                         xmlHttp.send(null);
                     });
                 });
