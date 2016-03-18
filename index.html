@@ -55,7 +55,7 @@
                 <th>说明</th>
                 <th>更新信息</th>
             </tr>
-            <tr id="items-tr">
+            <tr role="items-tr" file="Items.xml">
                 <td><a href="Files/Items.xml">Items.xml</a></td>
                 <td><a href="https://whattodevelop.codeplex.com/" target="_blank">WhatToDelvelop</a></td>
                 <td>WTD 的装备内容文件</td>
@@ -67,11 +67,11 @@
                 <td>艦これ BOSS列表</td>
                 <td>更新到6-3</td>
             </tr>
-            <tr>
+            <tr role="items-tr" file="Serif.xml">
                 <td><a href="Files/Serif.xml">Serif.xml</a></td>
                 <td>Serif</td>
                 <td>艦これ 中文字幕</td>
-                <td>2016-3-18 9:05</td>
+                <td><div id="items-content"></div></td>
             </tr>
             <tr>
                 <td><a href="Files/CodeA.dll">CodeA.dll</a></td>
@@ -87,18 +87,20 @@
             </tr>
             <script>
                 $(document).ready(function () {
-                    var xmlHttp = new XMLHttpRequest();
-                    xmlHttp.onreadystatechange = function () {
-                        if (xmlHttp.readyState == 4 & (xmlHttp.status == 200 | xmlHttp.status == 304) & xmlHttp.getResponseHeader("Content-Type") == "application/xml") {
-                            var time = new Date(xmlHttp.getResponseHeader("Last-Modified"));
-                            var days = Math.floor((new Date() - time) / (24 * 3600 * 1000));
-                            $("#items-content").text("更新于 " + days + " 天前");
-                            if (days <= 7)
-                                $("#items-tr").addClass("warning");
-                        }
-                    };
-                    xmlHttp.open("HEAD", "Files/Items.xml", true);
-                    xmlHttp.send(null);
+                    $("[role=items-tr]").each(function (){
+                        var xmlHttp = new XMLHttpRequest();
+                        xmlHttp.onreadystatechange = function () {
+                            if (xmlHttp.readyState == 4 & (xmlHttp.status == 200 | xmlHttp.status == 304) & xmlHttp.getResponseHeader("Content-Type") == "application/xml") {
+                                var time = new Date(xmlHttp.getResponseHeader("Last-Modified"));
+                                var days = Math.floor((new Date() - time) / (24 * 3600 * 1000));
+                                $(this).find("#items-content").text("更新于 " + days + " 天前");
+                                if (days <= 7)
+                                    $(this).addClass("success");
+                            }
+                        };
+                        xmlHttp.open("HEAD", "Files/" + this.attr("file"), true);
+                        xmlHttp.send(null);
+                    });
                 });
             </script>
         </table>
