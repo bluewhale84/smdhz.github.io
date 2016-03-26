@@ -179,35 +179,35 @@
           </Weekdays>
           <Target>更新不可</Target>
         </No2Ship>
+        <No2Ship>
+            <Name>榛名改二</Name>
+            <Weekdays>
+            <int>4</int>
+            <int>5</int>
+            </Weekdays>
+            <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+            <Name>扶桑改二</Name>
+            <Weekdays>
+            <int>3</int>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+            </Weekdays>
+            <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+            <Name>山城改二</Name>
+            <Weekdays>
+            <int>0</int>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+            </Weekdays>
+            <Target>更新不可</Target>
+        </No2Ship>
       </No2Info>
-      <No2Ship>
-        <Name>榛名改二</Name>
-        <Weekdays>
-          <int>4</int>
-          <int>5</int>
-        </Weekdays>
-        <Target>更新不可</Target>
-      </No2Ship>
-      <No2Ship>
-        <Name>扶桑改二</Name>
-        <Weekdays>
-          <int>3</int>
-          <int>4</int>
-          <int>5</int>
-          <int>6</int>
-        </Weekdays>
-        <Target>更新不可</Target>
-      </No2Ship>
-      <No2Ship>
-        <Name>山城改二</Name>
-        <Weekdays>
-          <int>0</int>
-          <int>4</int>
-          <int>5</int>
-          <int>6</int>
-        </Weekdays>
-        <Target>更新不可</Target>
-      </No2Ship>
       <IsFavorite>false</IsFavorite>
     </Item>
     <Item>
@@ -797,7 +797,7 @@
       <Name>10cm高角砲＋高射装置</Name>
       <No2Info>
         <No2Ship>
-          <Name>秋月</Name>
+          <Name>秋月 初月</Name>
           <Weekdays>
             <int>1</int>
             <int>2</int>
@@ -1497,6 +1497,121 @@
             <int>3</int>
           </Weekdays>
           <Target>Ro.44水上戦闘機</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>上陸用舟艇</Type>
+      <Icon>LandingCraft</Icon>
+      <Name>大発動艇</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>あきつ丸</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>2</int>
+            <int>3</int>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>大発動艇(八九式中戦車＆陸戦隊)</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>皐月改二</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>2</int>
+            <int>3</int>
+          </Weekdays>
+          <Target>大発動艇(八九式中戦車＆陸戦隊)</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>阿武隈改二</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>大発動艇(八九式中戦車＆陸戦隊)</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>上陸用舟艇</Type>
+      <Icon>LandingCraft</Icon>
+      <Name>大発動艇(八九式中戦車＆陸戦隊)</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>あきつ丸</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>特二式内火艇</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>皐月改二</Name>
+          <Weekdays>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>特二式内火艇</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>阿武隈改二</Name>
+          <Weekdays>
+            <int>2</int>
+            <int>3</int>
+            <int>4</int>
+          </Weekdays>
+          <Target>特二式内火艇</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>上陸用舟艇</Type>
+      <Icon>LandingCraft</Icon>
+      <Name>特二式内火艇</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>伊58</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>伊8</Name>
+          <Weekdays>
+            <int>3</int>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>伊401</Name>
+          <Weekdays>
+            <int>1</int>
+            <int>2</int>
+            <int>3</int>
+            <int>4</int>
+          </Weekdays>
+          <Target>更新不可</Target>
         </No2Ship>
       </No2Info>
       <IsFavorite>false</IsFavorite>
