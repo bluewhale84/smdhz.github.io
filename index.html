@@ -79,27 +79,26 @@
                 <td>出击记录器</td>
                 <td>v1.1.2</td>
             </tr>
-            <script>
-                $(document).ready(function () {
-                    $("[role=items-tr]").each(function (){
-                        var tr = $(this);
-                        var xmlHttp = new XMLHttpRequest();
-                        xmlHttp.onreadystatechange = function () {
-                            if (xmlHttp.readyState == 4 & (xmlHttp.status == 200 | xmlHttp.status == 304) & xmlHttp.getResponseHeader("Content-Type") == "application/xml") {
-                                var time = new Date(xmlHttp.getResponseHeader("Last-Modified"));
-                                var days = Math.floor((new Date() - time) / (24 * 3600 * 1000));
-                                tr.find("#items-content").text("更新于 " + days + " 天前");
-                                if (days <= 7)
-                                    tr.addClass("success");
-                            }
-                        };
-                        var str="Files/" + $(this).attr("file");
-                        xmlHttp.open("HEAD", "Files/" + $(this).attr("file"), true);
-                        xmlHttp.send(null);
-                    });
-                });
-            </script>
         </table>
     </div>
+    
+    <script>
+        $(document).ready(function () {
+            $("[role=items-tr]").each(function (){
+                var tr = $(this);
+                $.ajax({
+                    url: "Files/" + tr.attr("file"),
+                    type: "HEAD",
+                    complete: function(xhr){
+                        var time = new Date(xhr.getResponseHeader("Last-Modified"));
+                        var days = Math.floor((new Date() - time) / (24 * 3600 * 1000));
+                        tr.find("#items-content").text("更新于 " + days + " 天前");
+                        if (days <= 7)
+                            tr.addClass("success");
+                    } 
+                });
+            });
+        });
+    </script>
 </body>
 </html>
