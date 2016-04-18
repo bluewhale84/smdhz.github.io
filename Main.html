@@ -57,7 +57,7 @@
             $.ajax(
                 window.location.hash.replace("#!/", ""),
                 { success: function (data) {
-                    $("div #container").html(data);   // 改写页面元素
+                    $("#container").html(data);   // 改写页面元素
                 }
             });
         }
