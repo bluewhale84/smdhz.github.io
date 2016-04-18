@@ -53,12 +53,13 @@
 
         // 导航
         window.onhashchange = function () {
-            $.get(
+            var add =window.location.hash.replace("#!/", "");
+            $.ajax(
                 window.location.hash.replace("#!/", ""),
-                function (data) {
-                    $("div .container").html(data);   // 改写页面元素
+                { success: function (data) {
+                    $("div #container").html(data);   // 改写页面元素
                 }
-            );
+            });
         }
         
         // 加载主页
