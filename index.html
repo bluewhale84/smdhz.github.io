@@ -1,104 +1,52 @@
-﻿<!DOCTYPE html>
-
-<html lang="zh">
-<head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>法布雷大叔</title>
+    <title>Skyline</title>
 
+    <!-- Bootstrap -->
     <script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-</head>
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">My life for Aiur</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">主页</a></li>
-                    <li><a href="faith.html">信仰</a></li>
-                     <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">项目 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Projects/WTD.html">What to develop</a></li>
-                            <li><a href="Projects/CodeA.html">CodeA</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="anime.html">动画</a></li>
-                    <li><a href="me.html">关于</a></li>
+
+    <!-- Custom styles for this template -->
+    <link href="Content\css\cover.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Edge</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="/file">Files</a></li>
                 </ul>
+              </nav>
             </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">服务器代号：边缘</h1>
+            <p class="lead">“哎呀奶不死的啊”</p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p><a href="https://twitter.com/smdhz">法布雷大叔</a>私人服务器</p>
+            </div>
+          </div>
+
         </div>
-    </nav>
-    <div class="container">
-        <div class="jumbotron">
-            <h2>法布雷大叔 <small><del>报复</del>回报社会</small></h2>
-            <p style="font-family:Calibri">Uncle Fabre benefit society</p>
-            <p style="font-family:Meiryo">ファブレおじさんは働いています</p>
-        </div>
-        <div class="alert alert-info" role="alert">您可能需要这些文件</div>
-        <table class="table table-hover">
-            <tr>
-                <th>文件</th>
-                <th>项目</th>
-                <th>说明</th>
-                <th>更新信息</th>
-            </tr>
-            <tr role="items-tr" file="Items.xml">
-                <td><a href="Files/Items.xml">Items.xml</a></td>
-                <td><a href="https://whattodevelop.codeplex.com/" target="_blank">WhatToDelvelop</a></td>
-                <td>WTD 的装备内容文件</td>
-                <td><div id="items-content"></div></td>
-            </tr>
-            <tr>
-                <td><a href="Files/Enemy.xml">Enemy.xml</a></td>
-                <td><a href="https://github.com/smdhz/CodeA" target="_blank">CodeA</a></td>
-                <td>艦これ BOSS列表</td>
-                <td>更新到6-3</td>
-            </tr>
-            <tr>
-                <td><a href="Files/CodeA.dll">CodeA.dll</a></td>
-                <td><a href="https://github.com/smdhz/CodeA" target="_blank">CodeA</a></td>
-                <td>あ号作战计数器</td>
-                <td>v1.3.2</td>
-            </tr>
-            <tr>
-                <td><a href="Files/Logger.dll">Logger.dll</a></td>
-                <td><a href="https://github.com/smdhz/Logger" target="_blank">Logger</a></td>
-                <td>出击记录器</td>
-                <td>v1.1.2</td>
-            </tr>
-        </table>
+      </div>
     </div>
-    
-    <script>
-        $(document).ready(function () {
-            $("[role=items-tr]").each(function (){
-                var tr = $(this);
-                $.ajax({
-                    url: "Files/" + tr.attr("file"),
-                    type: "HEAD",
-                    complete: function(xhr){
-                        var time = new Date(xhr.getResponseHeader("Last-Modified"));
-                        var days = Math.floor((new Date() - time) / (24 * 3600 * 1000));
-                        tr.find("#items-content").text("更新于 " + days + " 天前");
-                        if (days <= 7)
-                            tr.addClass("success");
-                    } 
-                });
-            });
-        });
-    </script>
-</body>
+  </body>
 </html>

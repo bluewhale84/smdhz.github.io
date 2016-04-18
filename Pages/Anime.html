@@ -1,0 +1,62 @@
+﻿<div class="jumbotron">
+    <p>
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <span>此页内容来自服务器传递的动画信息</span>
+    </p>
+    <p><small><s>萌不到站长的动画是不会出现在列表里的</s></small></p>
+</div>
+<table id="content" class="table table-striped">
+    <thead>
+        <tr>
+            <th>标题</th>
+            <th>周</th>
+            <th>集</th>
+        </tr>
+    </thead>
+</table>
+<form style="margin-bottom: 10px">
+    <button type="button" class="btn btn-primary" disabled="disabled" onclick="lookfor()">查找</button>
+</form>
+
+<script>
+    var table = $("#content").dataTable({
+        "order": [[1, "asc"]],
+        "bFilter": false,
+        "bInfo": false,
+        "bPaginate": false
+    });
+    var weekdays = ["星期日（日曜日）", "星期一（月曜日）", "星期二（火曜日）", "星期三（水曜日）", "星期四（木曜日）", "星期五（金曜日）", "星期六（土曜日）"];
+    var keyword = null;
+
+    $.ajax({
+        url: "Files/Anime.xml",
+        type: "GET",
+        success: function (response) {
+            $(response).find("AnimeSync").each(function (index, anime) {
+                var array = [];
+
+                var time = new Date($(anime).find("First").text());
+                var weeks = Math.ceil((new Date() - time) / (7 * 24 * 3600 * 1000));
+
+                array.push($(anime).find("Title").text());
+                array.push(weekdays[$(anime).find("Weekday").text()]);
+                array.push(weeks);
+                array.push($(anime).find("Keyword").text());
+
+                table.fnAddData(array);
+            });
+        }
+    });
+
+    $("#content tbody").on("click", "tr", function () {
+        $("#content tbody .info").removeClass("info");
+        $(this).addClass("info");
+
+        keyword = $("#content").DataTable().rows(this).data()[0][3];
+        $(".btn-primary").removeAttr("disabled");
+    });
+
+    function lookfor() {
+        window.open("https://share.dmhy.org/topics/list?keyword=" + keyword);
+    }
+</script>

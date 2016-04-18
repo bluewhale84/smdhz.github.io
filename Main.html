@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Edge</title>
+
+    <script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">Edge</div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#!/Pages/Files.html">文件</a></li>
+                    <li><a href="#!/Pages/Faith.html">信仰</a></li>
+                     <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">项目 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#!/Pages/Projects/WTD.html">What to develop</a></li>
+                            <li><a href="#!/Pages/Projects/CodeA.html">CodeA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!/Pages/Anime.html">动画</a></li>
+                    <li><a href="#!/Pages/Me.html">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="container" class="container">
+    </div>
+
+    <script>
+        // 切换导航状态
+        $("nav #navbar").on("click", "li", function(){
+           $("nav #navbar").find("li").removeClass("active");
+           $(this).addClass("active");
+        });
+
+        // 导航
+        window.onhashchange = function () {
+            $.get(
+                window.location.hash.replace("#!/", ""),
+                function (data) {
+                    $("div .container").html(data);   // 改写页面元素
+                }
+            );
+        }
+        
+        // 加载主页
+        $(document).ready(function () {
+            window.location = "#!/Pages/Files.html";
+        });
+    </script>
+</body>
+</html>
