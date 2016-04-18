@@ -6,7 +6,7 @@
         <th>说明</th>
         <th>更新信息</th>
     </tr>
-    <tr role="items-tr" file="Items.xml">
+    <tr target="items-tr" file="Items.xml">
         <td><a href="Files/Items.xml">Items.xml</a></td>
         <td><a href="https://whattodevelop.codeplex.com/" target="_blank">WhatToDelvelop</a></td>
         <td>WTD 的装备内容文件</td>
@@ -33,7 +33,7 @@
 </table>
 
 <script>
-    $("[role=items-tr]").each(function (){
+    $("[target=items-tr]").each(function () {
         var tr = $(this);
         $.ajax({
             url: "Files/" + tr.attr("file"),
