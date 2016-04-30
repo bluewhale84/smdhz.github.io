@@ -32,16 +32,16 @@
             url: "http://www.smdhz.cf/Api/Anime/GetList",
             type: "GET",
             success: function (response) {
-                $(response).find("AnimeSync").each(function (index, anime) {
+                response.each(function (anime) {
                     var array = [];
 
-                    var time = new Date($(anime).find("First").text());
+                    var time = new Date(anime.First);
                     var weeks = Math.ceil((new Date() - time) / (7 * 24 * 3600 * 1000));
 
-                    array.push($(anime).find("Title").text());
-                    array.push(weekdays[$(anime).find("Weekday").text()]);
+                    array.push(anime.Title);
+                    array.push(weekdays[anime.Weekday]);
                     array.push(weeks);
-                    array.push($(anime).find("Keyword").text());
+                    array.push(anime.Keyword);
 
                     table.fnAddData(array);
                 });

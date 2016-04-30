@@ -57,7 +57,6 @@
 
         // 导航
         window.onhashchange = function () {
-            var add = window.location.hash.replace("#!/", "");
             $.get(
                 window.location.hash.replace("#!/", ""),
                 function (data) {
