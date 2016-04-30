@@ -1,9 +1,8 @@
 <div class="jumbotron">
     <p>
         <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-        <span>此页内容来自服务器传递的动画信息</span>
+        <span>内容来自天际服务 API</span>
     </p>
-    <p><small><s>萌不到站长的动画是不会出现在列表里的</s></small></p>
 </div>
 <table id="content" class="table table-striped">
     <thead>
@@ -32,7 +31,7 @@
             url: "http://www.smdhz.cf/Api/Anime/GetList",
             type: "GET",
             success: function (response) {
-                response.each(function (anime) {
+                response.forEach(function (anime) {
                     var array = [];
 
                     var time = new Date(anime.First);
