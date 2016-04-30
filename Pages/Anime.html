@@ -34,7 +34,7 @@
                 response.forEach(function (anime) {
                     var array = [];
 
-                    var time = new Date(anime.First);
+                    var time = new Date(parseInt(anime.First.replace(/\D/igm, "")));
                     var weeks = Math.ceil((new Date() - time) / (7 * 24 * 3600 * 1000));
 
                     array.push(anime.Title);
