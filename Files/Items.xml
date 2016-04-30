@@ -1532,6 +1532,25 @@
     <Item>
       <Type>水上偵察機</Type>
       <Icon>ReconSeaplane</Icon>
+      <Name>九八式水上偵察機(夜偵)</Name>
+      <No2Info>
+        <No2Ship>
+          <Name>川内改二</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+      </No2Info>
+      <IsFavorite>false</IsFavorite>
+    </Item>
+    <Item>
+      <Type>水上偵察機</Type>
+      <Icon>ReconSeaplane</Icon>
       <Name>Ro.43水偵</Name>
       <No2Info>
         <No2Ship>
