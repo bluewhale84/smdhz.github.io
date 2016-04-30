@@ -232,24 +232,26 @@
     <Item>
       <Type>大口径主砲</Type>
       <Icon>MainCanonHeavy</Icon>
-      <Name>381mm／50 三連装砲</Name>
+      <Name>381mm/50 三連装砲</Name>
       <No2Info>
         <No2Ship>
           <Name>Littorio</Name>
           <Weekdays>
+            <int>2</int>
             <int>3</int>
             <int>4</int>
             <int>5</int>
           </Weekdays>
-          <Target>更新不可</Target>
+          <Target>381mm/50 三連装砲改★+3</Target>
         </No2Ship>
         <No2Ship>
           <Name>Roma</Name>
           <Weekdays>
             <int>0</int>
+            <int>1</int>
             <int>6</int>
           </Weekdays>
-          <Target>更新不可</Target>
+          <Target>381mm/50 三連装砲改★+3</Target>
         </No2Ship>
       </No2Info>
       <IsFavorite>false</IsFavorite>
@@ -257,12 +259,13 @@
     <Item>
       <Type>大口径主砲</Type>
       <Icon>MainCanonHeavy</Icon>
-      <Name>381mm／50 三連装砲改</Name>
+      <Name>381mm/50 三連装砲改</Name>
       <No2Info>
         <No2Ship>
           <Name>Littorio</Name>
           <Weekdays>
             <int>0</int>
+            <int>1</int>
             <int>6</int>
           </Weekdays>
           <Target>更新不可</Target>
@@ -270,6 +273,7 @@
         <No2Ship>
           <Name>Roma</Name>
           <Weekdays>
+            <int>2</int>
             <int>3</int>
             <int>4</int>
             <int>5</int>
@@ -512,6 +516,8 @@
           <Weekdays>
             <int>3</int>
             <int>4</int>
+            <int>5</int>
+            <int>6</int>
           </Weekdays>
           <Target>25mm連装機銃★+5</Target>
         </No2Ship>
@@ -528,6 +534,23 @@
           <Weekdays>
             <int>0</int>
             <int>6</int>
+          </Weekdays>
+          <Target>25mm三連装機銃★+3</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>皐月</Name>
+          <Weekdays>
+            <int>1</int>
+            <int>2</int>
+          </Weekdays>
+          <Target>25mm三連装機銃★+3</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>文月</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>2</int>
           </Weekdays>
           <Target>25mm三連装機銃★+3</Target>
         </No2Ship>
@@ -555,7 +578,7 @@
             <int>3</int>
             <int>4</int>
           </Weekdays>
-          <Target>25mm三連装機銃 集中配備</Target>
+          <Target>更新不可</Target>
         </No2Ship>
         <No2Ship>
           <Name>摩耶改二</Name>
@@ -564,6 +587,14 @@
             <int>1</int>
             <int>5</int>
             <int>6</int>
+          </Weekdays>
+          <Target>更新不可</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>皐月改二</Name>
+          <Weekdays>
+            <int>3</int>
+            <int>4</int>
           </Weekdays>
           <Target>25mm三連装機銃 集中配備</Target>
         </No2Ship>
@@ -618,6 +649,7 @@
             <int>3</int>
             <int>4</int>
           </Weekdays>
+          <Target>更新不可</Target>
         </No2Ship>
         <No2Ship>
           <Name>Roma</Name>
@@ -627,6 +659,7 @@
             <int>5</int>
             <int>6</int>
           </Weekdays>
+          <Target>更新不可</Target>
         </No2Ship>
       </No2Info>
       <IsFavorite>false</IsFavorite>
@@ -644,7 +677,7 @@
             <int>3</int>
             <int>6</int>
           </Weekdays>
-          <Target> 更新不可</Target>
+          <Target>更新不可</Target>
         </No2Ship>
         <No2Ship>
           <Name>Roma</Name>
@@ -654,7 +687,7 @@
             <int>4</int>
             <int>5</int>
           </Weekdays>
-          <Target> 更新不可</Target>
+          <Target>更新不可</Target>
         </No2Ship>
       </No2Info>
       <IsFavorite>false</IsFavorite>
@@ -700,6 +733,15 @@
             <int>2</int>
             <int>3</int>
             <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>10cm高角砲＋高射装置</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>初月</Name>
+          <Weekdays>
+            <int>0</int>
             <int>5</int>
             <int>6</int>
           </Weekdays>
@@ -935,7 +977,7 @@
             <int>5</int>
             <int>6</int>
           </Weekdays>
-          <Target>61cm四連装(酸素)魚雷 ★+3</Target>
+          <Target>61cm四連装(酸素)魚雷★+3</Target>
         </No2Ship>
       </No2Info>
       <IsFavorite>false</IsFavorite>
@@ -1121,7 +1163,17 @@
       <Name>20.3cm連装砲</Name>
       <No2Info>
         <No2Ship>
-          <Name>青葉 衣笠</Name>
+          <Name>青葉</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>20.3cm(2号)連装砲</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>衣笠</Name>
           <Weekdays>
             <int>0</int>
             <int>1</int>
@@ -1430,6 +1482,17 @@
           <Weekdays>
             <int>0</int>
             <int>4</int>
+            <int>5</int>
+            <int>6</int>
+          </Weekdays>
+          <Target>二式水戦改</Target>
+        </No2Ship>
+        <No2Ship>
+          <Name>瑞穂</Name>
+          <Weekdays>
+            <int>0</int>
+            <int>1</int>
+            <int>2</int>
             <int>5</int>
             <int>6</int>
           </Weekdays>

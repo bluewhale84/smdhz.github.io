@@ -1,0 +1,50 @@
+<div class="alert alert-info" role="alert">您可能需要这些文件</div>
+<table class="table table-hover">
+    <tr>
+        <th>文件</th>
+        <th>项目</th>
+        <th>说明</th>
+        <th>更新信息</th>
+    </tr>
+    <tr target="items-tr" file="Items.xml">
+        <td><a href="Files/Items.xml">Items.xml</a></td>
+        <td><a href="https://whattodevelop.codeplex.com/" target="_blank">WhatToDelvelop</a></td>
+        <td>WTD 的装备内容文件</td>
+        <td><div id="items-content"></div></td>
+    </tr>
+    <tr>
+        <td><a href="Files/Enemy.xml">Enemy.xml</a></td>
+        <td><a href="https://github.com/smdhz/CodeA" target="_blank">CodeA</a></td>
+        <td>艦これ BOSS列表</td>
+        <td>更新到6-3</td>
+    </tr>
+    <tr>
+        <td><a href="Files/CodeA.dll">CodeA.dll</a></td>
+        <td><a href="https://github.com/smdhz/CodeA" target="_blank">CodeA</a></td>
+        <td>あ号作战计数器</td>
+        <td>v1.3.2</td>
+    </tr>
+    <tr>
+        <td><a href="Files/Logger.dll">Logger.dll</a></td>
+        <td><a href="https://github.com/smdhz/Logger" target="_blank">Logger</a></td>
+        <td>出击记录器</td>
+        <td>v1.1.2</td>
+    </tr>
+</table>
+
+<script>
+    $("[target=items-tr]").each(function () {
+        var tr = $(this);
+        $.ajax({
+            url: "Files/" + tr.attr("file"),
+            type: "HEAD",
+            complete: function(xhr){
+                var time = new Date(xhr.getResponseHeader("Last-Modified"));
+                var days = Math.floor((new Date() - time) / (24 * 3600 * 1000));
+                tr.find("#items-content").text("更新于 " + days + " 天前");
+                if (days <= 7)
+                    tr.addClass("success");
+            } 
+        });
+    });
+</script>
